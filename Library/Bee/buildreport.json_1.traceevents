@@ -1,0 +1,520 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1750585136723024, "dur": 822567, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585136723301, "dur": 3517, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585136726819, "dur": 48084, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585136774905, "dur": 410996, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585137185903, "dur": 358782, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585137544688, "dur": 902, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585137546636, "dur": 12, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1750585137007073, "dur": 160056, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137008127, "dur": 58963, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137138254, "dur": 8542, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137146803, "dur": 20314, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137147712, "dur": 17247, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137172824, "dur": 1437, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1750585137171970, "dur": 2320, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585137546807, "dur": 312, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1750585137238561, "dur":1927, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137240495, "dur":36, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1750585137240549, "dur":11, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1750585137240562, "dur":908, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1750585137241509, "dur":489, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137241998, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137528402, "dur":535, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137528937, "dur":50, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137528988, "dur":8, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137528996, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529009, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529012, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529027, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529029, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529039, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529041, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529054, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529057, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529067, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529069, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529085, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529087, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529097, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529098, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529111, "dur":44, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529155, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529165, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529167, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529179, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529180, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529190, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529192, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529203, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529205, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529213, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529216, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529230, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529233, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529243, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529271, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137529299, "dur":3325, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1750585137242566, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137242567, "dur":5892, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137248464, "dur":3891, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1750585137252361, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137264825, "dur":7306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1750585137272232, "dur":1521, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137273759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137277733, "dur":17406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137295248, "dur":1952, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137297203, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137297208, "dur":13044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137310377, "dur":615, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137310997, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137311004, "dur":16956, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137328125, "dur":1766, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137329897, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137329906, "dur":9737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137339785, "dur":665, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137340455, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137340463, "dur":7361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137348052, "dur":732, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137348789, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137348796, "dur":5576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137354506, "dur":815, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137355326, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137355335, "dur":10210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137365656, "dur":784, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137366446, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137366456, "dur":10796, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137377374, "dur":1436, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137378816, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137378826, "dur":8597, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137387561, "dur":1264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137388830, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137388838, "dur":10175, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1750585137399128, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/level0.resS" }}
+,{ "pid":12345, "tid":1, "ts":1750585137399313, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1750585137399322, "dur":7065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/level0.resS" }}
+,{ "pid":12345, "tid":1, "ts":1750585137406506, "dur":121988, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137242058, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137242059, "dur":6393, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137248463, "dur":2116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1750585137250584, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137266827, "dur":6623, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1750585137273691, "dur":1836, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137275533, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137277798, "dur":16734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137294772, "dur":2416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137297194, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137297201, "dur":14464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137311944, "dur":2582, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137314533, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137314543, "dur":18572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137333419, "dur":3125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137336553, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137336565, "dur":11532, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137348330, "dur":1624, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137349960, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137349968, "dur":19542, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137369754, "dur":1605, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137371366, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137371375, "dur":15216, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137386822, "dur":21628, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137408456, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1750585137408465, "dur":6843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":2, "ts":1750585137415386, "dur":113278, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137241986, "dur":31, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137242018, "dur":6436, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137248463, "dur":4288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1750585137252755, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137264817, "dur":9098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1750585137274146, "dur":2573, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137276723, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137277905, "dur":20197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137298206, "dur":7894, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137306109, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137306119, "dur":10069, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137316297, "dur":714, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137317067, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137317077, "dur":20270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137337872, "dur":3456, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137341334, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137341343, "dur":16153, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137357679, "dur":1836, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137359522, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137359534, "dur":13849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137373602, "dur":1863, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137375472, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137375535, "dur":13660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":3, "ts":1750585137389389, "dur":486, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1750585137389880, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1750585137389888, "dur":12526, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1750585137402583, "dur":125854, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137242074, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137242075, "dur":6410, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137248487, "dur":3066, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1750585137251559, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137266483, "dur":6003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1750585137272670, "dur":1437, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137274112, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137278342, "dur":20831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137299289, "dur":1555, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137301034, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137301049, "dur":14485, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137315722, "dur":1138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137316866, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137316875, "dur":21299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137338397, "dur":1030, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137339623, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137339634, "dur":15290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137355275, "dur":1009, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137356290, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137356298, "dur":13864, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137370385, "dur":1243, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137371633, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137371641, "dur":16427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1750585137388272, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1750585137388465, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1750585137388637, "dur":13782, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1750585137402590, "dur":125874, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137241987, "dur":124, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137242111, "dur":6353, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137248466, "dur":7014, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1750585137255485, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137264777, "dur":8584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1750585137273702, "dur":1755, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137275463, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137277755, "dur":20619, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137298561, "dur":2761, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137301328, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137301336, "dur":18097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137319684, "dur":2619, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137322311, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137322321, "dur":19696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137342263, "dur":1457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137343726, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137343736, "dur":17494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137361462, "dur":1878, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137363346, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137363355, "dur":14389, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137377899, "dur":5802, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137383707, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137383717, "dur":15762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1750585137399720, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":5, "ts":1750585137399920, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1750585137399927, "dur":7460, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":5, "ts":1750585137407562, "dur":121077, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137242185, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137242186, "dur":6264, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137248463, "dur":3641, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1750585137252109, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137264293, "dur":3084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1750585137267502, "dur":1468, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1750585137268975, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137268983, "dur":8026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1750585137277089, "dur":764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137277858, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137277865, "dur":15921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137293987, "dur":2625, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137296616, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137296622, "dur":13575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137310334, "dur":689, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137311028, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137311037, "dur":19773, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137330914, "dur":680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137331600, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137331608, "dur":14153, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137345853, "dur":10338, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137356198, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137356208, "dur":12126, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137368512, "dur":1122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137369651, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137369659, "dur":19318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1750585137389113, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":6, "ts":1750585137389237, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1750585137389359, "dur":12830, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":6, "ts":1750585137402374, "dur":126191, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137241936, "dur":73, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137242018, "dur":6429, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137248603, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":7, "ts":1750585137248618, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137254671, "dur":1496, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":7, "ts":1750585137256172, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/app.info" }}
+,{ "pid":12345, "tid":7, "ts":1750585137256341, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137256950, "dur":4216, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/app.info" }}
+,{ "pid":12345, "tid":7, "ts":1750585137261170, "dur":1448, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1750585137262623, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137265183, "dur":6253, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1750585137271592, "dur":8056, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1750585137279653, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137279660, "dur":5400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1750585137285196, "dur":2410, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137287612, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137294562, "dur":12557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137307304, "dur":2043, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137309353, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137309362, "dur":18078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137327956, "dur":2040, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137330036, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137330045, "dur":13141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137343323, "dur":563, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137343892, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137344132, "dur":15551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137359840, "dur":1469, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137361315, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137361326, "dur":12354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137373804, "dur":2858, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137376670, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1750585137376681, "dur":31647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1750585137408441, "dur":120209, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137242381, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137242382, "dur":6134, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137248517, "dur":3621, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1750585137252140, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137264880, "dur":7067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1750585137272145, "dur":2196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1750585137274346, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137277339, "dur":12205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1750585137289622, "dur":1209, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137290835, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137294675, "dur":12109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137306961, "dur":728, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137307695, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137307704, "dur":9979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137317775, "dur":2101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137319883, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137319894, "dur":19757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137339832, "dur":973, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137340811, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137340818, "dur":11644, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137352557, "dur":972, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137353535, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137353544, "dur":12188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137365863, "dur":3442, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137369311, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137369321, "dur":19128, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1750585137388550, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1750585137388652, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137388657, "dur":5968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1750585137396134, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/resources.assets" }}
+,{ "pid":12345, "tid":8, "ts":1750585137396348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1750585137396358, "dur":9165, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/resources.assets" }}
+,{ "pid":12345, "tid":8, "ts":1750585137405641, "dur":122985, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137242279, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137242280, "dur":6215, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137248496, "dur":5500, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1750585137254001, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137264750, "dur":6757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1750585137271627, "dur":1116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR).exe" }}
+,{ "pid":12345, "tid":9, "ts":1750585137272747, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137272756, "dur":3963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR).exe" }}
+,{ "pid":12345, "tid":9, "ts":1750585137276795, "dur":1032, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137277832, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137277840, "dur":16774, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137294770, "dur":2236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137297012, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137297020, "dur":12892, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137310019, "dur":908, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137310932, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137310941, "dur":18240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137329289, "dur":805, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137330098, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137330104, "dur":9853, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137340056, "dur":661, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137340721, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137340729, "dur":7572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137348400, "dur":899, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137349534, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137349542, "dur":10295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137359971, "dur":1425, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137361402, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137361411, "dur":10314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137371846, "dur":1165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137373018, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137373026, "dur":10888, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137384036, "dur":882, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137384924, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137384932, "dur":6677, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1750585137391705, "dur":336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":9, "ts":1750585137392045, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137392053, "dur":7806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":9, "ts":1750585137400001, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1750585137400115, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1750585137400122, "dur":5237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1750585137405481, "dur":122909, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137242459, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137242459, "dur":6029, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137248489, "dur":5466, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137253959, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137262230, "dur":3083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137265425, "dur":1300, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137266731, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137266740, "dur":5291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137272152, "dur":1452, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137273609, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137275121, "dur":8134, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137283352, "dur":4218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137287577, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137294546, "dur":13596, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137308320, "dur":1130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137309455, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137309464, "dur":16481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137326058, "dur":985, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137327050, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137327062, "dur":11237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137338423, "dur":717, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137339146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137339155, "dur":8086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137347347, "dur":1015, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137348368, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137348376, "dur":6121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137354610, "dur":674, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137355290, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137355299, "dur":10840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137366248, "dur":4281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137370535, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137370545, "dur":12538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137383185, "dur":1335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137384526, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137384537, "dur":7724, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":10, "ts":1750585137392673, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1750585137392840, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137392847, "dur":7799, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1750585137400785, "dur":296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137401085, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1750585137401091, "dur":6242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1750585137407455, "dur":120954, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1750585137242709, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1750585137242709, "dur":5821, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1750585137248530, "dur":5020, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1750585137253554, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1750585137264660, "dur":4978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1750585137269721, "dur":180476, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":11, "ts":1750585137450203, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1750585137450338, "dur":6683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":11, "ts":1750585137457089, "dur":71459, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137242587, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137242588, "dur":5902, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137248491, "dur":4721, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1750585137253217, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137264736, "dur":8359, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1750585137273229, "dur":764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137273998, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137278058, "dur":19178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137297347, "dur":1296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137298649, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137298657, "dur":14628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137313432, "dur":1238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137314677, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137314686, "dur":16414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137331205, "dur":630, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137331839, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137331846, "dur":13919, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137345874, "dur":2194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137348074, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137348084, "dur":11594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137359811, "dur":2719, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137362537, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137362546, "dur":11139, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137373845, "dur":18556, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137392405, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1750585137392412, "dur":13652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1750585137406331, "dur":122151, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137242743, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137242743, "dur":5739, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137248484, "dur":4764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":13, "ts":1750585137253252, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137263908, "dur":8170, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":13, "ts":1750585137272224, "dur":1283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137273512, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137274703, "dur":8124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137282968, "dur":4524, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137287500, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137294573, "dur":13303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137307996, "dur":1926, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137309928, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137309973, "dur":50814, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137360927, "dur":2033, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137362965, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137362974, "dur":10726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137373828, "dur":19758, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137393592, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1750585137393642, "dur":13456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":13, "ts":1750585137407217, "dur":121399, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137242787, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137242787, "dur":5721, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137248509, "dur":1932, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1750585137250444, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137264898, "dur":7792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1750585137272795, "dur":1026, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137273826, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137277722, "dur":16116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137293993, "dur":1956, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137295955, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137295964, "dur":12388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137308469, "dur":1090, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137309564, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137309572, "dur":16900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137326570, "dur":998, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137327573, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137327582, "dur":11279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137338999, "dur":803, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137339808, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137339815, "dur":10953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137350908, "dur":707, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137351621, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137351630, "dur":12688, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137364486, "dur":25934, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137390427, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1750585137390435, "dur":15339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":14, "ts":1750585137405932, "dur":122600, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1750585137242849, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1750585137242850, "dur":5672, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1750585137248523, "dur":6582, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":15, "ts":1750585137255110, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1750585137264573, "dur":5978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":15, "ts":1750585137270655, "dur":243200, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":15, "ts":1750585137513861, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1750585137513867, "dur":14270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":15, "ts":1750585137528210, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":15, "ts":1750585137528213, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137242887, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137242887, "dur":5626, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137248514, "dur":1443, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1750585137249961, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137265511, "dur":3339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1750585137268956, "dur":37947, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137306908, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137307610, "dur":3022, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137310743, "dur":547, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137311294, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137311301, "dur":17898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137329297, "dur":673, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137330030, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137330040, "dur":10681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137340828, "dur":846, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137341680, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137341688, "dur":9215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137351012, "dur":1031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137352090, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137352099, "dur":13454, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137365666, "dur":1100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137366771, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137366795, "dur":13818, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137380897, "dur":1222, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137382126, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137382136, "dur":5616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137387910, "dur":1107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137389037, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137389044, "dur":10096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":16, "ts":1750585137399245, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/Grocery Shopper (IPROGVR)_Data/level0" }}
+,{ "pid":12345, "tid":16, "ts":1750585137399441, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1750585137399448, "dur":6976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/Grocery Shopper (IPROGVR)_Data/level0" }}
+,{ "pid":12345, "tid":16, "ts":1750585137406548, "dur":121957, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1750585137535535, "dur":3031, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1750585137547216, "dur": 837, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1750585137546620, "dur": 1474, "ph": "X", "name": "Write chrome-trace events", "args": {} },

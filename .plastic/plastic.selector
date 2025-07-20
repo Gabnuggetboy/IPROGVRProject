@@ -1,0 +1,4 @@
+repository "Grocery Shopper (IPROGVR)/Grocery Shopper (IPROGVR)@18968273303354@cloud"
+  path "/"
+    br "/main"
+    co "/main"
