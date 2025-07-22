@@ -6,7 +6,7 @@ using TMPro;
 
 
 
-public class GameManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
     public GameObject inventory;
     public InputActionProperty showButton;
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         inventory.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
         inventory.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
 
