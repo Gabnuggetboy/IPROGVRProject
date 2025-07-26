@@ -103,6 +103,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -321,8 +322,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.45f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.45f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.45f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
--r:"C:/Users/junji/Downloads/Grocery Shopper (IPROGVR)/Grocery Shopper (IPROGVR)/Library/PackageCache/com.unity.testtools.codecoverage@1.2.6/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"C:/Users/junji/Downloads/Grocery Shopper (IPROGVR)/Grocery Shopper (IPROGVR)/Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"C:/Users/jorda/OneDrive/Documents/GitHub/IPROGVRProject/Library/PackageCache/com.unity.testtools.codecoverage@1.2.6/lib/ReportGenerator/ReportGeneratorMerged.dll"
+-r:"C:/Users/jorda/OneDrive/Documents/GitHub/IPROGVRProject/Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
@@ -352,6 +353,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.CoreUtils.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.XR.Management.Editor.ref.dll"
@@ -365,12 +367,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/ActivateGrabRay.cs"
-"Assets/ActivateTeleportRay.cs"
 "Assets/DisplayInventory.cs"
 "Assets/FireBulletOnActivate.cs"
 "Assets/GameManager.cs"
-"Assets/GameManager1.cs"
+"Assets/InventoryManager.cs"
 "Assets/Item.cs"
+"Assets/MainManager.cs"
+"Assets/PauseMenuManager.cs"
 "Assets/Player.cs"
 "Assets/Scriptable Objects/Inventory/Scripts/InventoryObject.cs"
 "Assets/Scriptable Objects/Items/Scripts/DefaultObject.cs"
