@@ -26,7 +26,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void quitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Start");
     }
     // Start is called before the first frame update
 
@@ -43,9 +43,26 @@ public class PauseMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mainMenu.activeSelf)
+        if(SceneManager.GetSceneByName("Start").name == "Start")
         {
-            //Nothing happens
+            if (mainMenu.activeSelf)
+            {
+                //Nothing happens
+            }
+            else
+            {
+                if (showButton.action.WasPressedThisFrame())
+                {
+                    pauseMenu.SetActive(!pauseMenu.activeSelf);
+                    togglePause();
+                }
+                if (pauseMenu.activeSelf)
+                {
+                    pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
+                    pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+                    pauseMenu.transform.forward *= -1;
+                }
+            }
         }
         else
         {
@@ -61,6 +78,5 @@ public class PauseMenuManager : MonoBehaviour
                 pauseMenu.transform.forward *= -1;
             }
         }
-       
     }
 }

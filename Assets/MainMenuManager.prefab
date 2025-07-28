@@ -45,8 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 3084642017335298084, guid: 0c0b92837ed557d4484b22adc486e3cd, type: 3}
+  pauseMenu: {fileID: 0}
+  showButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Show Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6ea5a706-da0b-42f9-a4ea-b72a1a900e1f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   head: {fileID: 0}
   spawnDistance: 2
   spawnPoint: {fileID: 5382597905065200799, guid: b8be986a414723d4380e3b0c23ce471c, type: 3}
   Player: {fileID: 0}
-  isMainMenuOn: 0
+  fadeScreen: {fileID: 0}
+  fadeImage: {fileID: 0}
+  fadeDuration: 4
