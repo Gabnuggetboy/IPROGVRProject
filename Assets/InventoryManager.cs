@@ -1,41 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-
-
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public GameObject inventory;
     public InputActionProperty showButton;
-    public TMP_Text message;
     public Transform head;
-    public float spawnDistance = 2;
+    public float spawnDistance = 2f;
+    public bool isInventoryEnabled = false;
+    public float verticalOffset = 0.5f; // Offset to position the inventory above the head
 
-    public bool isInventoryEnabled = false; 
-
-
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-
-        if (!isInventoryEnabled)
+        var canvas = inventory.GetComponent<Canvas>();
+        if (canvas != null)
         {
-            inventory.SetActive(false); // Hide until enabled
-            return;
+            canvas.renderMode = RenderMode.WorldSpace;
+            canvas.worldCamera = Camera.main;
+            canvas.transform.localScale = new Vector3(0.002f, 0.002f, 0.002f); // Adjusted for VR size
         }
 
-        inventory.SetActive(true);
+        if (!inventory.GetComponent<TrackedDeviceGraphicRaycaster>())
+        {
+            inventory.AddComponent<TrackedDeviceGraphicRaycaster>();
+        }
+    }
 
-        Vector3 forward = new Vector3(head.forward.x, 0, head.forward.z).normalized;
-        Vector3 position = head.position + forward * spawnDistance;
-        position.y -= 0.3f; 
+    void Start()
+    {
+        inventory.SetActive(isInventoryEnabled);
+    }
 
-        inventory.transform.position = position;
-        inventory.transform.LookAt(new Vector3(head.position.x, inventory.transform.position.y, head.position.z));
-        inventory.transform.forward *= -1;
+    void Update()
+    {
+        // Toggle inventory visibility with the Input Action
+        if (showButton.action.WasPressedThisFrame())
+        {
+            isInventoryEnabled = !isInventoryEnabled;
+            inventory.SetActive(isInventoryEnabled);
+        }
 
+        // Position the inventory like MainManager if active
+        if (inventory.activeSelf)
+        {
+            inventory.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance + new Vector3(0, verticalOffset, 0);
+            inventory.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            inventory.transform.forward *= -1;
+        }
     }
 }

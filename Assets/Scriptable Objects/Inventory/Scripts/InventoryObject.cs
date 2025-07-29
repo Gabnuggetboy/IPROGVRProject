@@ -1,48 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-using System;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
-
-
 public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     public string savePath;
     private ItemDatabaseObject database;
     public List<InventorySlot> Container = new List<InventorySlot>();
+    public ItemObject emptyItem; // Reference to the EmptyItem asset
 
     private void OnEnable()
     {
 #if UNITY_EDITOR
         database = (ItemDatabaseObject)AssetDatabase.LoadAssetAtPath("Assets/Resources/Database.asset", typeof(ItemDatabaseObject));
 #else
-    database = Resources.Load<ItemDatabaseObject>("Database"); 
+        database = Resources.Load<ItemDatabaseObject>("Database"); 
 #endif
+        // Initialize with 4 empty slots if Container is empty
+        if (Container.Count == 0)
+        {
+            InitializeEmptySlots();
+        }
     }
+
+    private void InitializeEmptySlots()
+    {
+        Container.Clear();
+        for (int i = 0; i < 4; i++)
+        {
+            Container.Add(new InventorySlot(database.GetId[emptyItem], emptyItem, 0));
+        }
+    }
+
     public void AddItem(ItemObject _item, int _amount)
     {
+        // Check for empty slots (amount == 0) to replace
         for (int i = 0; i < Container.Count; i++)
         {
-            if (Container[i].item == _item)
+            if (Container[i].item == emptyItem && Container[i].amount == 0)
+            {
+                Container[i] = new InventorySlot(database.GetId[_item], _item, _amount);
+                return;
+            }
+            else if (Container[i].item == _item)
             {
                 Container[i].AddAmount(_amount);
                 return;
             }
         }
-
-        Container.Add(new InventorySlot(database.GetId[_item], _item, _amount));
-
+        // If no empty slots and item not found, optionally expand or ignore
+        // For now, we'll assume only 4 slots are allowed
+        Debug.LogWarning("Inventory is full!");
     }
 
     public void Save()
     {
-        string SaveData = JsonUtility.ToJson(this, true);
+        string saveData = JsonUtility.ToJson(this, true);
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
-        bf.Serialize(file, SaveData);
+        bf.Serialize(file, saveData);
         file.Close();
     }
 
@@ -55,9 +76,12 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
             JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
             file.Close();
         }
-
+        else
+        {
+            // If no save file exists, initialize with empty slots
+            InitializeEmptySlots();
+        }
     }
-
 
     public void OnAfterDeserialize()
     {
@@ -69,24 +93,5 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnBeforeSerialize()
     {
-    }
-}
-
-[System.Serializable]
-public class InventorySlot
-{
-    public int ID;
-    public ItemObject item;
-    public int amount;
-    public InventorySlot(int _id, ItemObject _item, int _amount)
-    {
-        ID = _id;
-        item = _item;
-        amount = _amount;
-    }
-
-    public void AddAmount(int value)
-    {
-        amount += value;
     }
 }

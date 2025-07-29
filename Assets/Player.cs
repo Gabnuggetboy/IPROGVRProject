@@ -1,22 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
     public InventoryObject inventory;
-    public void OnTriggerEnter(Collider other)
+    public XRBaseController rightController;
+    private XRBaseInteractor rightInteractor;
+
+    private void Awake()
     {
-        var item = other.GetComponent<Item>();
-        if (item)
+        rightInteractor = rightController.GetComponent<XRBaseInteractor>();
+        if (rightInteractor != null)
         {
-            inventory.AddItem(item.item, 1);
-            Destroy(other.gameObject);
+            rightInteractor.selectEntered.AddListener(OnSelectEnter);
         }
     }
 
-    void Update()
+    private void OnSelectEnter(SelectEnterEventArgs args)
+    {
+        var item = args.interactableObject.transform.GetComponent<Item>();
+        if (item)
+        {
+            inventory.AddItem(item.item, 1);
+            Destroy(item.gameObject);
+        }
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -34,5 +45,13 @@ public class Player : MonoBehaviour
     private void OnApplicationQuit()
     {
         inventory.Container.Clear();
+    }
+
+    private void OnDestroy()
+    {
+        if (rightInteractor != null)
+        {
+            rightInteractor.selectEntered.RemoveListener(OnSelectEnter);
+        }
     }
 }
