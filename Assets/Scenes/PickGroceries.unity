@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.17281069, g: 0.2159507, b: 0.29789397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -816,7 +817,7 @@ MonoBehaviour:
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
-  m_AllowAnchorControl: 1
+  m_AllowAnchorControl: 0
   m_UseForceGrab: 1
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
@@ -856,10 +857,10 @@ MonoBehaviour:
   m_PositionAction:
     m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 
+      m_Id: 23b5b319-2ce0-4dcb-a57e-77690cd604b6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -868,10 +869,10 @@ MonoBehaviour:
   m_RotationAction:
     m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 
+      m_Id: c9273699-a823-4d51-81cf-aaf57d266cf7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1000,10 +1001,10 @@ MonoBehaviour:
   m_RotateAnchorAction:
     m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Rotate Anchor
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 
+      m_Id: ea90ef9e-f50e-4f9a-be4f-6a31646a1bb5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1869,6 +1870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulkKitchenTowel
       objectReference: {fileID: 0}
+    - target: {fileID: 6677393239967223680, guid: b364f02537a07f24cbfe6dd432c01bfc, type: 3}
+      propertyPath: m_TagString
+      value: Bulk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b364f02537a07f24cbfe6dd432c01bfc, type: 3}
 --- !u!1001 &463467337
@@ -2055,7 +2060,7 @@ RectTransform:
   m_Children:
   - {fileID: 107364707}
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2072,6 +2077,10 @@ PrefabInstance:
     - target: {fileID: 1291972149093597336, guid: 905bd9b5faaeb4544954dc9d6cb43efb, type: 3}
       propertyPath: m_Name
       value: Pan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291972149093597336, guid: 905bd9b5faaeb4544954dc9d6cb43efb, type: 3}
+      propertyPath: m_TagString
+      value: Regular
       objectReference: {fileID: 0}
     - target: {fileID: 3002278875806976197, guid: 905bd9b5faaeb4544954dc9d6cb43efb, type: 3}
       propertyPath: m_RootOrder
@@ -2261,7 +2270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &527303388
 PrefabInstance:
@@ -3045,7 +3054,7 @@ MonoBehaviour:
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
-  m_AllowAnchorControl: 1
+  m_AllowAnchorControl: 0
   m_UseForceGrab: 1
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
@@ -3566,7 +3575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 92.58099, y: -30, z: 0}
 --- !u!1 &823883098
 GameObject:
@@ -3807,7 +3816,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3852,6 +3861,10 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_Name
       value: XR Device Simulator (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -5310,6 +5323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceCreamContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 81122354552380022, guid: 28c008b78c403994bae1b87248f41bb9, type: 3}
+      propertyPath: m_TagString
+      value: Frozen
+      objectReference: {fileID: 0}
     - target: {fileID: 9044515181734999761, guid: 28c008b78c403994bae1b87248f41bb9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5531,7 +5548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8558932246983892241, guid: 7df7aa4e829a33c41853bd7c9bfde8fb, type: 3}
       propertyPath: m_RootOrder
-      value: 66
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8558932246983892241, guid: 7df7aa4e829a33c41853bd7c9bfde8fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6393,6 +6410,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74700dd7863f6464eb5f7de00babd773, type: 3}
       propertyPath: m_Name
       value: Chocolate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74700dd7863f6464eb5f7de00babd773, type: 3}
+      propertyPath: m_TagString
+      value: Refrigerated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74700dd7863f6464eb5f7de00babd773, type: 3}
@@ -8331,7 +8352,7 @@ RectTransform:
   m_Children:
   - {fileID: 1015189318893786462}
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10867,7 +10888,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4618827547959525614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
@@ -11071,7 +11092,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4618827547959525614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: teleportToStart
         m_Mode: 1
@@ -11844,91 +11865,6 @@ Transform:
   m_Father: {fileID: 5678236546319828340}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3622933065533305376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_RootOrder
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.025996305
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.80726
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.655
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459404, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459405, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: m_Name
-      value: MenuManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: head
-      value: 
-      objectReference: {fileID: 2092872701}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 823883100}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: mainMenu
-      value: 
-      objectReference: {fileID: 5610974898255708473}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: fadeImage
-      value: 
-      objectReference: {fileID: 107364705}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 3084642016074539975}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: fadeScreen
-      value: 
-      objectReference: {fileID: 476545278}
-    - target: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 5382597904937183444}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
 --- !u!33 &3626778049405422654
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12559,17 +12495,6 @@ Transform:
   m_Father: {fileID: 3257772272296308495}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4618827547959525614 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8241131310585459406, guid: 8043c062619becf4281bd6947cc93b7f, type: 3}
-  m_PrefabInstance: {fileID: 3622933065533305376}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34379078011482541933beb42ca2b907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4639242663296499358
 Transform:
   m_ObjectHideFlags: 0
@@ -13219,8 +13144,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4618827547959525614}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1727484522}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: restartPlaythrough
         m_Mode: 1
         m_Arguments:
@@ -13867,8 +13792,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4618827547959525614}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1727484522}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: resumeGame
         m_Mode: 1
         m_Arguments:
@@ -13974,8 +13899,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4618827547959525614}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1727484522}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
@@ -16379,7 +16304,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8558932248507387771
 GameObject:

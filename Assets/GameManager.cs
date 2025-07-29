@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public XROrigin Player;
     public GameObject fadeScreen;
     public Image fadeImage;
-    public float fadeDuration = 4.0f;
+    public float fadeDuration;
 
     public void resumeGame()
     {
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     }
     public void quitGame()
     {
-        if(SceneManager.GetSceneByName("Start").name == "Start")
+        if(mainMenu.activeSelf)
         {
             //Application.Quit();
             UnityEditor.EditorApplication.isPlaying = false;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene("Start");
+            togglePause();
         }
     }
 
@@ -79,7 +80,7 @@ public class GameManager : MonoBehaviour
     IEnumerator teleportPlayer(Transform player, Vector3 spawnPoint)
     {
         player.position = spawnPoint;
-        yield return null;
+        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator closeFade()
@@ -105,43 +106,33 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        if(SceneManager.GetSceneByName("Start").name != "Start")
+        if (SceneManager.GetSceneByName("Start").name != "Start")
         {
             mainMenu.SetActive(false);
         }
-        fadeScreen.SetActive(false);
-        pauseMenu.SetActive(false);
+        else
+        {
+            fadeScreen.SetActive(false);
+            pauseMenu.SetActive(false);
+        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetSceneByName("Start").name == "Start")
-        {
-            if (fadeScreen.activeSelf)
-            {
-                fadeScreen.transform.position = head.position + head.forward * 0.5f;
-                fadeScreen.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                fadeScreen.transform.forward *= -1;
-            }
-            if (mainMenu.activeSelf)
-            {
-                mainMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                mainMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                mainMenu.transform.forward *= -1;
-            }
 
-            if (showButton.action.WasPressedThisFrame())
-            {
-                pauseMenu.SetActive(!pauseMenu.activeSelf);
-                togglePause();
-            }
-            if (pauseMenu.activeSelf)
-            {
-                pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                pauseMenu.transform.forward *= -1;
-            }
+        if (fadeScreen.activeSelf)
+        {
+            fadeScreen.transform.position = head.position + head.forward * 0.5f;
+            fadeScreen.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            fadeScreen.transform.forward *= -1;
+        }
+        if (mainMenu.activeSelf)
+        {
+            mainMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
+            mainMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            mainMenu.transform.forward *= -1;
         }
         else
         {
@@ -156,13 +147,8 @@ public class GameManager : MonoBehaviour
                 pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
                 pauseMenu.transform.forward *= -1;
             }
-            if (fadeScreen.activeSelf)
-            {
-                fadeScreen.transform.position = head.position + head.forward * 0.5f;
-                fadeScreen.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                fadeScreen.transform.forward *= -1;
-            }
         }
-        
+           
+        }
     }
-}
+

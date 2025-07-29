@@ -27,6 +27,7 @@ public class PauseMenuManager : MonoBehaviour
     public void quitGame()
     {
         SceneManager.LoadScene("Start");
+        togglePause();
     }
     // Start is called before the first frame update
 
