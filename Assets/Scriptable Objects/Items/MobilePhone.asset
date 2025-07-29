@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8c1edd7598225458004a56d42fcbe6, type: 3}
   m_Name: MobilePhone
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3261083311056955946, guid: afd1f7a593fa4d74189296125c02e18d, type: 3}
+  prefab: {fileID: 4857349013544373833, guid: 4b02717891e353244acb2a6e37366e3b, type: 3}
   type: 1
   description: A Phone for your quest log.

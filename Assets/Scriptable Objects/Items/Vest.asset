@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8c1edd7598225458004a56d42fcbe6, type: 3}
   m_Name: Vest
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5606267520020344063, guid: 33a6f4fd213d9db4786ec95711780aae, type: 3}
+  prefab: {fileID: 3397424020260278880, guid: 35caaa4d5e0e59840918490f5ca2ad43, type: 3}
   type: 1
   description: 

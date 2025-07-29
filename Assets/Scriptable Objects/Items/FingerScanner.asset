@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8c1edd7598225458004a56d42fcbe6, type: 3}
   m_Name: FingerScanner
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5735916424776416689, guid: 57b426ffe2789834eb3740045ead8827, type: 3}
+  prefab: {fileID: 7379669009541998026, guid: 8e07b04083f99344797dc6af216fe730, type: 3}
   type: 1
   description: To scan your items.

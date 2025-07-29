@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8c1edd7598225458004a56d42fcbe6, type: 3}
   m_Name: PrintedSticker
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4846680421884233026, guid: cbb6e6f4070cc6841b5338f81d71c8b7, type: 3}
+  prefab: {fileID: 1829065056582377411, guid: 53b9aadaa1e36cc4bb055235a53f8d38, type: 3}
   type: 1
   description: 
