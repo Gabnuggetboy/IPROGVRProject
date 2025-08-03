@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 using Unity.XR.CoreUtils;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class PauseMenuManager : MonoBehaviour
     public Transform head;
     public float spawnDistance = 2;
     private bool isPaused;
+    public GameObject fadeScreen;
+    public Image fadeImage;
+    public float fadeDuration = 1.0f;
 
     public void resumeGame()
     {
@@ -26,8 +31,8 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void quitGame()
     {
-        SceneManager.LoadScene("Start");
         togglePause();
+        StartCoroutine(ReturnToStart());
     }
     // Start is called before the first frame update
 
@@ -35,6 +40,62 @@ public class PauseMenuManager : MonoBehaviour
     {
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    IEnumerator ReturnToStart()
+    {
+        yield return StartCoroutine(initialiseFade());
+        yield return StartCoroutine(Fade(1));
+        SceneManager.LoadScene("Start");
+        yield return StartCoroutine(Fade(0));
+        yield return StartCoroutine(closeFade());
+    }
+
+    IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
+    {
+        yield return StartCoroutine(initialiseFade());
+
+        yield return StartCoroutine(Fade(1));
+
+        //player.position = spawnPoint;
+        yield return StartCoroutine(teleportPlayer(player, spawnPoint));
+
+        yield return StartCoroutine(Fade(0));
+
+        yield return StartCoroutine(closeFade());
+    }
+    IEnumerator initialiseFade()
+    {
+        fadeScreen.SetActive(true);
+        yield return null;
+    }
+
+    IEnumerator teleportPlayer(Transform player, Vector3 spawnPoint)
+    {
+        player.position = spawnPoint;
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    IEnumerator closeFade()
+    {
+        fadeScreen.SetActive(false);
+        yield return null;
+    }
+
+    IEnumerator Fade(float targetAlpha)
+    {
+        float startAlpha = fadeImage.color.a;
+        float timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, timer / fadeDuration);
+            fadeImage.color = new Color(0, 0, 0, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = new Color(0, 0, 0, targetAlpha);
     }
     void Start()
     {

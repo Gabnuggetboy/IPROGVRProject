@@ -860,9 +860,10 @@ GameObject:
   - component: {fileID: 5163976987420192336}
   - component: {fileID: 5163976987420192339}
   - component: {fileID: 5163976987420192338}
+  - component: {fileID: 8533382814099326288}
   m_Layer: 0
   m_Name: BulkKitchenTowel
-  m_TagString: Untagged
+  m_TagString: Bulk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1122,6 +1123,21 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &8533382814099326288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677393239967223680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a228f7d2f99dd3429d14aa64050e4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  itemName: Kitchen Towel
+  isScanned: 0
 --- !u!1 &6708695928166309990
 GameObject:
   m_ObjectHideFlags: 0

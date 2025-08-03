@@ -6,6 +6,7 @@ using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     public XROrigin Player;
     public GameObject fadeScreen;
     public Image fadeImage;
-    public float fadeDuration;
+    public float fadeDuration = 1.0f;
 
     public void resumeGame()
     {
@@ -46,8 +47,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Start");
             togglePause();
+            StartCoroutine(ReturnToStart());
         }
     }
 
@@ -57,6 +58,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
     }
 
+    IEnumerator ReturnToStart()
+    {
+        yield return StartCoroutine(initialiseFade());
+        yield return StartCoroutine(Fade(1));
+        SceneManager.LoadScene("Start");
+        yield return StartCoroutine(Fade(0));
+        yield return StartCoroutine(closeFade());
+    }
 
     IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
     {

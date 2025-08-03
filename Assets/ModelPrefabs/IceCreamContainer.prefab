@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7042655403748379667}
   - component: {fileID: 7042655403748379666}
   - component: {fileID: 7042655403748379665}
+  - component: {fileID: 1819676759599594712}
   m_Layer: 0
   m_Name: IceCreamContainer
-  m_TagString: Untagged
+  m_TagString: Frozen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +270,21 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1819676759599594712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81122354552380022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a228f7d2f99dd3429d14aa64050e4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  itemName: Ice Cream
+  isScanned: 0
 --- !u!1 &249874370495718373
 GameObject:
   m_ObjectHideFlags: 0
