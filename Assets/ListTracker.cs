@@ -20,7 +20,7 @@ public class ListTracker : MonoBehaviour
     public List<GameObject> groceries;
     public int numberOfPickedItems = 3;
 
-    [HideInInspector]
+    //[HideInInspector]
     public List<Grocery> objectiveList = new List<Grocery>();
 
 
@@ -61,7 +61,12 @@ public class ListTracker : MonoBehaviour
         {
             Destroy(this);
         }
-        else instance = this;
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+            
         if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
         {
             GenerateObjectiveList();
@@ -70,7 +75,13 @@ public class ListTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(SceneManager.GetActiveScene().name == "Packing")
+        {
+            foreach (var item in objectiveList)
+            {
+                Debug.Log($"Item: {item.itemName}, Quantity: {item.quantity}, Scanned: {item.scannedAmount}");
+            }
+        }
     }
 
     // Update is called once per frame
