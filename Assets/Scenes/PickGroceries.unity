@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.17281069, g: 0.2159507, b: 0.29789397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4129,7 +4130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -5592,6 +5593,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Frozen
       objectReference: {fileID: 0}
+    - target: {fileID: 7042655403748379665, guid: 28c008b78c403994bae1b87248f41bb9, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 450294968}
     - target: {fileID: 9044515181734999761, guid: 28c008b78c403994bae1b87248f41bb9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -6766,7 +6771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07708779dd9512147852b23e68fb16e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim1: {fileID: 0}
+  anim2: {fileID: 0}
 --- !u!65 &1782392341
 BoxCollider:
   m_ObjectHideFlags: 0

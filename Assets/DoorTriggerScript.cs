@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class DoorTriggerScript : MonoBehaviour
 {
-    public Animator anim;
+    public Animator anim1;
+    public Animator anim2;
     private void OnTriggerEnter(Collider other)
     {
-        //anim.SetBool("Open", true);
+        
         if(SceneManager.GetSceneByName("Start").name == "Start")
         {
+            anim1.SetBool("Open", true);
+            anim2.SetBool("Open", true);
             StartCoroutine(InitialisePickScene());
         }
         else if(SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")

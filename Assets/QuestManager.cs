@@ -42,7 +42,7 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (questOverlay.activeSelf)
+        /*if (questOverlay.activeSelf)
         {
             // Offset position in camera (head) space
             Vector3 offset = head.right * 0.3f + head.up * 0.25f + head.forward * 0.5f;
@@ -52,12 +52,12 @@ public class QuestManager : MonoBehaviour
 
             // Make the overlay face the camera
             questOverlay.transform.rotation = Quaternion.LookRotation(questOverlay.transform.position - head.position);
-        }
-        /*if (questOverlay.activeSelf)
+        }*/
+        if (questOverlay.activeSelf)
         {
             questOverlay.transform.position = head.position + head.forward * 0.5f;
             questOverlay.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
             questOverlay.transform.forward *= -1;
-        }*/
+        }
     }
 }

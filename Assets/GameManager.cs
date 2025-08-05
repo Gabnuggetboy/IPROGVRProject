@@ -7,11 +7,14 @@ using Unity.XR.CoreUtils;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject pauseMenu;
+    public GameObject leftController;
+    public GameObject rightController;
     public InputActionProperty showButton;
     private bool isPaused;
     public Transform head;
@@ -35,7 +38,11 @@ public class GameManager : MonoBehaviour
 
     public void teleportToStart()
     {
+        XRController leftInput = leftController.GetComponent<XRController>();
+        XRController rightInput = leftController.GetComponent<XRController>();
         mainMenu.SetActive(false);
+        leftInput.enableInputActions = false;
+        rightInput.enableInputActions = false;
         StartCoroutine(FadeTeleport(Player.transform, spawnPoint.transform.position));
     }
     public void quitGame()
@@ -60,11 +67,16 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ReturnToStart()
     {
+        XRController leftInput = leftController.GetComponent<XRController>();
+        XRController rightInput = leftController.GetComponent<XRController>();
         yield return StartCoroutine(initialiseFade());
         yield return StartCoroutine(Fade(1));
         SceneManager.LoadScene("Start");
         yield return StartCoroutine(Fade(0));
         yield return StartCoroutine(closeFade());
+        leftInput.enableInputActions = true;
+        rightInput.enableInputActions = true;
+
     }
 
     IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
