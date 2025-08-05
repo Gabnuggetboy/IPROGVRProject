@@ -13,6 +13,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject mainMenu;
     public InputActionProperty showButton;
+    public InputActionProperty moveInput;
     public Transform head;
     public float spawnDistance = 2;
     private bool isPaused;
@@ -51,29 +52,10 @@ public class PauseMenuManager : MonoBehaviour
         yield return StartCoroutine(closeFade());
     }
 
-    IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
-    {
-        yield return StartCoroutine(initialiseFade());
-
-        yield return StartCoroutine(Fade(1));
-
-        //player.position = spawnPoint;
-        yield return StartCoroutine(teleportPlayer(player, spawnPoint));
-
-        yield return StartCoroutine(Fade(0));
-
-        yield return StartCoroutine(closeFade());
-    }
     IEnumerator initialiseFade()
     {
         fadeScreen.SetActive(true);
         yield return null;
-    }
-
-    IEnumerator teleportPlayer(Transform player, Vector3 spawnPoint)
-    {
-        player.position = spawnPoint;
-        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator closeFade()
@@ -97,48 +79,48 @@ public class PauseMenuManager : MonoBehaviour
 
         fadeImage.color = new Color(0, 0, 0, targetAlpha);
     }
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(0.2f);
+        yield return StartCoroutine(Fade(0));
+        yield return StartCoroutine(closeFade());
+
+    }
+    private void Awake()
+    {
+        showButton.action.Disable();
+        moveInput.action.Disable();
+    }
     void Start()
     {
+        mainMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        fadeScreen.SetActive(true);
+        StartCoroutine(FadeOut());
+        showButton.action.Enable();
+        moveInput.action.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetSceneByName("Start").name == "Start")
-        {
-            if (mainMenu.activeSelf)
-            {
-                //Nothing happens
-            }
-            else
-            {
-                if (showButton.action.WasPressedThisFrame())
-                {
-                    pauseMenu.SetActive(!pauseMenu.activeSelf);
-                    togglePause();
-                }
-                if (pauseMenu.activeSelf)
-                {
-                    pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                    pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                    pauseMenu.transform.forward *= -1;
-                }
-            }
-        }
-        else
-        {
-            if (showButton.action.WasPressedThisFrame())
-            {
-                pauseMenu.SetActive(!pauseMenu.activeSelf);
-                togglePause();
-            }
-            if (pauseMenu.activeSelf)
-            {
-                pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                pauseMenu.transform.forward *= -1;
-            }
-        }
+    if (showButton.action.WasPressedThisFrame())
+    {
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+        togglePause();
     }
+    if (pauseMenu.activeSelf)
+    {
+        pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
+        pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+        pauseMenu.transform.forward *= -1;
+     }
+    if (fadeScreen.activeSelf)
+    {
+        fadeScreen.transform.position = head.position + head.forward * 0.5f;
+        fadeScreen.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+        fadeScreen.transform.forward *= -1;
+    }
+  }
 }
+

@@ -8,14 +8,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject pauseMenu;
-    public GameObject leftController;
-    public GameObject rightController;
     public InputActionProperty showButton;
+    public InputActionProperty moveInput;
     private bool isPaused;
     public Transform head;
     public float spawnDistance = 2;
@@ -38,11 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void teleportToStart()
     {
-        XRController leftInput = leftController.GetComponent<XRController>();
-        XRController rightInput = leftController.GetComponent<XRController>();
         mainMenu.SetActive(false);
-        leftInput.enableInputActions = false;
-        rightInput.enableInputActions = false;
         StartCoroutine(FadeTeleport(Player.transform, spawnPoint.transform.position));
     }
     public void quitGame()
@@ -67,16 +63,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ReturnToStart()
     {
-        XRController leftInput = leftController.GetComponent<XRController>();
-        XRController rightInput = leftController.GetComponent<XRController>();
         yield return StartCoroutine(initialiseFade());
         yield return StartCoroutine(Fade(1));
         SceneManager.LoadScene("Start");
         yield return StartCoroutine(Fade(0));
         yield return StartCoroutine(closeFade());
-        leftInput.enableInputActions = true;
-        rightInput.enableInputActions = true;
-
     }
 
     IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
@@ -84,6 +75,8 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(initialiseFade());
 
         yield return StartCoroutine(Fade(1));
+
+        yield return new WaitForSeconds(0.2f);
 
        //player.position = spawnPoint;
         yield return StartCoroutine(teleportPlayer(player, spawnPoint));
@@ -107,6 +100,13 @@ public class GameManager : MonoBehaviour
     IEnumerator closeFade()
     {
         fadeScreen.SetActive(false);
+        yield return StartCoroutine(EnableShowButton());
+    }
+
+    IEnumerator EnableShowButton()
+    {
+        showButton.action.Enable();
+        moveInput.action.Enable();
         yield return null;
     }
 
@@ -124,6 +124,11 @@ public class GameManager : MonoBehaviour
         }
 
         fadeImage.color = new Color(0, 0, 0, targetAlpha);
+    }
+    private void Awake()
+    {
+        showButton.action.Disable();
+        moveInput.action.Disable();
     }
     void Start()
     {
@@ -155,21 +160,19 @@ public class GameManager : MonoBehaviour
             mainMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
             mainMenu.transform.forward *= -1;
         }
-        else
+        if (showButton.action.WasPressedThisFrame())
         {
-            if (showButton.action.WasPressedThisFrame())
-            {
-                pauseMenu.SetActive(!pauseMenu.activeSelf);
-                togglePause();
-            }
-            if (pauseMenu.activeSelf)
-            {
-                pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
-                pauseMenu.transform.forward *= -1;
-            }
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            togglePause();
         }
+        if (pauseMenu.activeSelf)
+        {
+            pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
+            pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            pauseMenu.transform.forward *= -1;
+        }
+     }
            
-        }
-    }
+ }
+    
 

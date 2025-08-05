@@ -2,38 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DoorTriggerScript : MonoBehaviour
 {
     public Animator anim1;
     public Animator anim2;
+    public GameObject fadeScreen;
+    public Image fadeImage;
+    public float fadeDuration = 2.0f;
+    public InputActionProperty moveInput;
     private void OnTriggerEnter(Collider other)
     {
-        
-        if(SceneManager.GetSceneByName("Start").name == "Start")
+        StartCoroutine(InitialiseChangeScene());
+    }
+    IEnumerator InitialiseChangeScene()
+    {
+        if (SceneManager.GetSceneByName("Start").name == "Start")
         {
             anim1.SetBool("Open", true);
             anim2.SetBool("Open", true);
-            StartCoroutine(InitialisePickScene());
+            moveInput.action.Disable();
+            yield return new WaitForSeconds(0.05f);
+            fadeScreen.SetActive(true);
+            yield return StartCoroutine(Fade(1));
+            SceneManager.LoadScene("PickGroceries");
+            Debug.Log("Change to grocery picking stage");
+            yield return null;
         }
-        else if(SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
+        else if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
         {
-            StartCoroutine(InitialisePackScene());
+            moveInput.action.Disable();
+            yield return new WaitForSeconds(0.05f);
+            fadeScreen.SetActive(true);
+            yield return StartCoroutine(Fade(1));
+            SceneManager.LoadScene("Packing");
+            Debug.Log("Change to packing stage");
+            yield return null;
         }
+
     }
-    IEnumerator InitialisePickScene()
+   
+    IEnumerator Fade(float targetAlpha)
     {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("PickGroceries");
-        Debug.Log("Change to grocery picking stage");
-        yield return null;
-    }
-    IEnumerator InitialisePackScene()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Packing");
-        Debug.Log("Change to packing stage");
-        yield return null;
+        float startAlpha = fadeImage.color.a;
+        float timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, timer / fadeDuration);
+            fadeImage.color = new Color(0, 0, 0, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = new Color(0, 0, 0, targetAlpha);
     }
     private void OnTriggerExit(Collider other)
     {
