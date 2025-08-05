@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
         if (!grabInteractable)
         {
             grabInteractable = gameObject.AddComponent<XRGrabInteractable>();
-            grabInteractable.interactionLayerMask = LayerMask.GetMask("Default"); 
+            grabInteractable.interactionLayers = InteractionLayerMask.GetMask("Default");
         }
     }
 }
