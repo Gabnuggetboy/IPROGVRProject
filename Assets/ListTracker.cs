@@ -67,7 +67,7 @@ public class ListTracker : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
             
-        if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
+        if (SceneManager.GetActiveScene().name == "PickGroceries")
         {
             GenerateObjectiveList();
         }
