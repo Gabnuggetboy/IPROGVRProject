@@ -14,47 +14,56 @@ public class ListTracker : MonoBehaviour
         public string itemName;
         public int quantity;
         public int scannedAmount;
+        public GroceryProperties.GroceryTag tag;
     }
     public UnityEvent UpdateQuestOverlay;
     public int maxQuantity = 3;
     public List<GameObject> groceries;
     public int numberOfPickedItems = 3;
 
-    //[HideInInspector]
     public List<Grocery> objectiveList = new List<Grocery>();
-
 
     public void GenerateObjectiveList()
     {
         Debug.Log("List Created");
         objectiveList.Clear();
         List<GameObject> tempGroceryList = new List<GameObject>(groceries);
-        for(int i = 0; i<numberOfPickedItems; i++)
+        for (int i = 0; i < numberOfPickedItems; i++)
         {
             int randIndex = Random.Range(0, tempGroceryList.Count);
             int itemQuantity = Random.Range(1, maxQuantity);
             GameObject selected = tempGroceryList[randIndex];
             tempGroceryList.RemoveAt(randIndex);
-            objectiveList.Add(new Grocery { groceryItem = selected, quantity = itemQuantity, scannedAmount = 0, itemName = selected.GetComponent<GroceryProperties>().itemName }) ;
+            GroceryProperties props = selected.GetComponent<GroceryProperties>();
+            objectiveList.Add(new Grocery
+            {
+                groceryItem = selected,
+                quantity = itemQuantity,
+                scannedAmount = 0,
+                itemName = props.itemName,
+                tag = props.groceryTag // Assign tag
+            });
         }
-
+        UpdateQuestOverlay.Invoke();
     }
 
     public void MarkScanned(GameObject scannedItem)
     {
         var instance = scannedItem.GetComponent<GroceryProperties>();
         string scannedId = instance.itemId;
-        foreach(var item in objectiveList)
+        foreach (var item in objectiveList)
         {
-            if(item.groceryItem.GetComponent<GroceryProperties>().itemId == scannedId && item.scannedAmount != item.quantity)
+            if (item.groceryItem.GetComponent<GroceryProperties>().itemId == scannedId && item.scannedAmount < item.quantity)
             {
                 item.scannedAmount++;
                 instance.isScanned = true;
                 UpdateQuestOverlay.Invoke();
+                Debug.Log($"Scanned {item.itemName} ({item.tag})");
                 return;
             }
         }
     }
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -66,27 +75,21 @@ public class ListTracker : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-            
+
         if (SceneManager.GetActiveScene().name == "PickGroceries")
         {
             GenerateObjectiveList();
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Packing")
+        if (SceneManager.GetActiveScene().name == "Packing")
         {
             foreach (var item in objectiveList)
             {
-                Debug.Log($"Item: {item.itemName}, Quantity: {item.quantity}, Scanned: {item.scannedAmount}");
+                Debug.Log($"Item: {item.itemName}, Tag: {item.tag}, Quantity: {item.quantity}, Scanned: {item.scannedAmount}");
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

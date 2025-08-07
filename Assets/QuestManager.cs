@@ -17,7 +17,7 @@ public class QuestManager : MonoBehaviour
         foreach (var item in ListTracker.instance.objectiveList)
         {
             string checkMark;
-            if(item.scannedAmount != item.quantity)
+            if (item.scannedAmount != item.quantity)
             {
                 checkMark = "<color=red>✗</color>";
             }
