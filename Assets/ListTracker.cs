@@ -73,7 +73,15 @@ public class ListTracker : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (SceneManager.GetActiveScene().name == "Start")
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+     
         }
 
         if (SceneManager.GetActiveScene().name == "PickGroceries")

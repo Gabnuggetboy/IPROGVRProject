@@ -1151,7 +1151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314476042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.176, z: 0}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5148,7 +5148,7 @@ MonoBehaviour:
   fadeImage: {fileID: 107364705}
   fadeDuration: 2
   moveInput:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Move Input
       m_Type: 0
@@ -5158,7 +5158,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &1256759478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6292,6 +6292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1086254400307382127, guid: 4d65cf37716fffc439ba726e6c947463, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5429687169551008336, guid: 4d65cf37716fffc439ba726e6c947463, type: 3}
       propertyPath: m_Name
       value: ShoppingCart
@@ -12006,7 +12010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5382597904937183444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.797, y: 0, z: 11.589}
+  m_LocalPosition: {x: 13.02, y: 0, z: 11.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14086,7 +14090,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 5382597904937183444}
   Player: {fileID: 823883100}
   fadeScreen: {fileID: 476545278}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 107364705}
   fadeDuration: 1
 --- !u!1 &6550079919103119378
 GameObject:
@@ -14140,7 +14144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6598815578688293420
 MonoBehaviour:
   m_ObjectHideFlags: 0
