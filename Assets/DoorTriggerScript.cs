@@ -34,7 +34,15 @@ public class DoorTriggerScript : MonoBehaviour
         }
         else if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
         {
-            bool isObjectiveCompleted = true;
+            Debug.Log("Quest complete");
+            moveInput.action.Disable();
+            yield return new WaitForSeconds(0.05f);
+            fadeScreen.SetActive(true);
+            yield return StartCoroutine(Fade(1));
+            SceneManager.LoadScene("Packing");
+            Debug.Log("Change to packing stage");
+            yield return null;
+            /*bool isObjectiveCompleted = true;
 
             foreach(var item in ListTracker.instance.objectiveList)
             {
@@ -55,7 +63,7 @@ public class DoorTriggerScript : MonoBehaviour
                 SceneManager.LoadScene("Packing");
                 Debug.Log("Change to packing stage");
                 yield return null;
-            }
+            }*/
         }
 
     }

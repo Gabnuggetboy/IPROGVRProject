@@ -64,6 +64,12 @@ public class ListTracker : MonoBehaviour
         }
     }
 
+    public void DestroyTracker()
+    {
+        instance = null;
+        Destroy(gameObject);
+    }
+
     private void Awake()
     {
         if (instance != null && instance != this)

@@ -129,6 +129,8 @@ public class GameManager : MonoBehaviour
     {
         showButton.action.Disable();
         moveInput.action.Disable();
+        if(ListTracker.instance != null)
+            ListTracker.instance.DestroyTracker();
     }
     void Start()
     {

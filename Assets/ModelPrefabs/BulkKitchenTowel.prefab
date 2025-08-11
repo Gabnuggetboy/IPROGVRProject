@@ -1138,6 +1138,8 @@ MonoBehaviour:
   itemId: 1
   itemName: Kitchen Towel
   isScanned: 0
+  groceryTag: 3
+  outlineMaterial: {fileID: 0}
 --- !u!1 &6708695928166309990
 GameObject:
   m_ObjectHideFlags: 0

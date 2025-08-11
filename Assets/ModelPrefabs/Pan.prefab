@@ -81,3 +81,5 @@ MonoBehaviour:
   itemId: 3
   itemName: Frying Pan
   isScanned: 0
+  groceryTag: 2
+  outlineMaterial: {fileID: 0}

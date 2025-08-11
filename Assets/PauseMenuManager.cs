@@ -47,7 +47,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         yield return StartCoroutine(initialiseFade());
         yield return StartCoroutine(Fade(1));
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Start", LoadSceneMode.Single);
         yield return StartCoroutine(Fade(0));
         yield return StartCoroutine(closeFade());
     }
