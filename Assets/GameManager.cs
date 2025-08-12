@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public InputActionProperty showButton;
     public InputActionProperty moveInput;
+    public AudioSource button;
     private bool isPaused;
     public Transform head;
     public float spawnDistance = 2;
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
     {
+        button.Play();
         yield return StartCoroutine(initialiseFade());
 
         yield return StartCoroutine(Fade(1));
@@ -134,6 +136,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        button.Play();
         if (SceneManager.GetSceneByName("Start").name != "Start")
         {
             mainMenu.SetActive(false);

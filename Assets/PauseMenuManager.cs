@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,7 +12,10 @@ public class PauseMenuManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject mainMenu;
+    public GameObject questOverlay;
+    public TMP_Text logText;
     public InputActionProperty showButton;
+    public InputActionProperty questButton;
     public InputActionProperty moveInput;
     public Transform head;
     public float spawnDistance = 2;
@@ -20,6 +23,25 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject fadeScreen;
     public Image fadeImage;
     public float fadeDuration = 1.0f;
+
+    public void UpdateLog()
+    {
+        Debug.Log("UpdateLog called");
+        logText.text = "";
+        foreach (var item in ListTracker.instance.objectiveList)
+        {
+            string checkMark;
+            if (item.scannedAmount != item.quantity)
+            {
+                checkMark = "<color=red>☐</color>";
+            }
+            else
+            {
+                checkMark = "<color=green>☑</color>";
+            }
+            logText.text += $"{checkMark} {item.itemName} ({item.scannedAmount}/{item.quantity})\n";
+        }
+    }
 
     public void resumeGame()
     {
@@ -95,21 +117,35 @@ public class PauseMenuManager : MonoBehaviour
     {
         mainMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        //questOverlay.SetActive(false);
         fadeScreen.SetActive(true);
         StartCoroutine(FadeOut());
         showButton.action.Enable();
         moveInput.action.Enable();
+        Debug.Log($"Objective count: {ListTracker.instance?.objectiveList?.Count}");
+        if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
+        {
+            questOverlay.SetActive(true);
+            UpdateLog();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+    if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
+    {
+        if (questButton.action.WasPressedThisFrame())
+            {
+                questOverlay.SetActive(!questOverlay.activeSelf);
+            }
+        }
     if (showButton.action.WasPressedThisFrame())
     {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         togglePause();
     }
-    if (pauseMenu.activeSelf)
+        if (pauseMenu.activeSelf)
     {
         pauseMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
         pauseMenu.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
@@ -121,6 +157,12 @@ public class PauseMenuManager : MonoBehaviour
         fadeScreen.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
         fadeScreen.transform.forward *= -1;
     }
-  }
+    if (questOverlay.activeSelf)
+      {
+            questOverlay.transform.position = head.position + head.forward * 0.5f;
+            questOverlay.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            questOverlay.transform.forward *= -1;
+        }
+    }
 }
 

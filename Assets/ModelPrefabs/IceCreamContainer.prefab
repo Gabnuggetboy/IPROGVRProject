@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 81122354552380022}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -1.713, y: 1.003, z: 2.509}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2194561392378674627}
@@ -285,6 +285,8 @@ MonoBehaviour:
   itemId: 2
   itemName: Ice Cream
   isScanned: 0
+  groceryTag: 0
+  outlineMaterial: {fileID: 0}
 --- !u!1 &249874370495718373
 GameObject:
   m_ObjectHideFlags: 0
