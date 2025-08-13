@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17281069, g: 0.2159507, b: 0.29789397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1393,7 +1392,7 @@ GameObject:
   - component: {fileID: 285814215}
   - component: {fileID: 285814214}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cover2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2777,7 +2776,7 @@ GameObject:
   - component: {fileID: 579117837}
   - component: {fileID: 579117836}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cover3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4375,7 +4374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -6238,7 +6237,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3469226725838148561, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 4116954447336496447, guid: 0be0028c24f2a4c14a96b6aa39055933, type: 3}
   moveInput:
     m_UseReference: 1
     m_Action:
@@ -6256,6 +6255,7 @@ MonoBehaviour:
   fadeScreen: {fileID: 476545278}
   fadeImage: {fileID: 107364705}
   fadeDuration: 1
+  slideDuration: 2
 --- !u!1001 &1770172405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7229,7 +7229,7 @@ GameObject:
   - component: {fileID: 1992634619}
   - component: {fileID: 1992634618}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Cover1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
