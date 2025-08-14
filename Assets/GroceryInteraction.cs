@@ -45,31 +45,29 @@ public class GroceryInteraction : MonoBehaviour
                 OutlineHandler outlineHandler = hitObj.GetComponent<OutlineHandler>();
                 XRGrabInteractable grab = hitObj.GetComponent<XRGrabInteractable>();
 
+                // Always ensure grabbing is enabled
+                if (grab != null)
+                {
+                    grab.enabled = true;
+                }
+
                 if (outlineHandler != null)
                 {
                     if (!grocery.isScanned)
                     {
-                        // Show red outline and disable grabbing
+                        // Show red outline but keep item grabbable
                         outlineHandler.ShowOutline(Color.red);
-                        if (grab != null)
-                        {
-                            grab.enabled = false; // Completely disable grabbing
-                        }
 
-                        // Handle scanning
+                        // Handle trigger press to "scan" item
                         if (triggerAction.action.WasPressedThisFrame())
                         {
-                            ScanItem(grocery, hitObj, outlineHandler, grab);
+                            ScanItem(grocery, hitObj, outlineHandler);
                         }
                     }
                     else
                     {
-                        // Show green outline and enable grabbing
+                        // Show green outline for scanned items
                         outlineHandler.ShowOutline(Color.green);
-                        if (grab != null)
-                        {
-                            grab.enabled = true; // Enable grabbing for scanned items
-                        }
                     }
                 }
             }
@@ -95,7 +93,7 @@ public class GroceryInteraction : MonoBehaviour
         return false;
     }
 
-    private void ScanItem(GroceryProperties grocery, GameObject hitObj, OutlineHandler outlineHandler, XRGrabInteractable grab)
+    private void ScanItem(GroceryProperties grocery, GameObject hitObj, OutlineHandler outlineHandler)
     {
         grocery.isScanned = true;
         ListTracker.instance.MarkScanned(hitObj);
@@ -103,13 +101,7 @@ public class GroceryInteraction : MonoBehaviour
         // Change to green outline
         outlineHandler.ShowOutline(Color.green);
 
-        // Enable grabbing
-        if (grab != null)
-        {
-            grab.enabled = true;
-        }
-
-        Debug.Log($"Scanned: {grocery.itemName} ({grocery.tag})");
+        Debug.Log($"Scanned: {grocery.itemName} ({grocery.groceryTag})");
     }
 
     private void ClearPreviousOutline()
