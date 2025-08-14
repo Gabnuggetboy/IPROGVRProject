@@ -28,20 +28,25 @@ public class DoorTriggerScript : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             fadeScreen.SetActive(true);
             yield return StartCoroutine(Fade(1));
+            TimeTracking.tracker.isRunning = false;
+            TimeTracking.tracker.savedTimeEquipment = TimeTracking.tracker.elapsedTimeEquipment;
+            Debug.Log("Time Taken was: " + TimeTracking.tracker.elapsedTimeEquipment);
             SceneManager.LoadScene("PickGroceries");
             Debug.Log("Change to grocery picking stage");
             yield return null;
         }
         else if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
         {
-           /* Debug.Log("Quest complete");
-            moveInput.action.Disable();
-            yield return new WaitForSeconds(0.05f);
-            fadeScreen.SetActive(true);
-            yield return StartCoroutine(Fade(1));
-            SceneManager.LoadScene("Packing");
-            Debug.Log("Change to packing stage");
-            yield return null;*/
+            /* Debug.Log("Quest complete");
+             anim1.SetBool("Open", true);
+             anim2.SetBool("Open", true);
+             moveInput.action.Disable();
+             yield return new WaitForSeconds(0.05f);
+             fadeScreen.SetActive(true);
+             yield return StartCoroutine(Fade(1));
+             SceneManager.LoadScene("Packing");
+             Debug.Log("Change to packing stage");
+             yield return null;*/
             bool isObjectiveCompleted = true;
 
             foreach(var item in ListTracker.instance.objectiveList)
@@ -56,7 +61,12 @@ public class DoorTriggerScript : MonoBehaviour
             if (isObjectiveCompleted)
             {
                 Debug.Log("Quest complete");
+                anim1.SetBool("Open", true);
+                anim2.SetBool("Open", true);
                 moveInput.action.Disable();
+                TimeTracking.tracker.isRunning = false;
+                TimeTracking.tracker.savedTimePicking = TimeTracking.tracker.elapsedTimePicking;
+                Debug.Log("Time Taken was: " + TimeTracking.tracker.elapsedTimePicking);
                 yield return new WaitForSeconds(0.05f);
                 fadeScreen.SetActive(true);
                 yield return StartCoroutine(Fade(1));
@@ -85,7 +95,7 @@ public class DoorTriggerScript : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        Debug.Log("Exit");
     }
     // Start is called before the first frame update
     void Start()

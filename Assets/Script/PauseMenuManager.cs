@@ -13,6 +13,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject mainMenu;
     public GameObject questOverlay;
+    public AudioSource button;
     public TMP_Text logText;
     public InputActionProperty showButton;
     public InputActionProperty questButton;
@@ -25,7 +26,8 @@ public class PauseMenuManager : MonoBehaviour
     public float fadeDuration = 1.0f;
     public float slideDuration = 1.0f;
     private bool questVisible = false;
-    private Coroutine questSlideCoroutine;
+    public Vector3 startOffset;
+    public Vector3 endOffset;
 
     public void UpdateLog()
     {
@@ -48,6 +50,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void resumeGame()
     {
+        button.Play();
         pauseMenu.SetActive(false);
         togglePause();
     }
@@ -70,20 +73,19 @@ public class PauseMenuManager : MonoBehaviour
     IEnumerator OpenQuest(bool show)
     {
         float elapsed = 0f;
-        Vector3 startOffset = show ? new Vector3(0, -0.5f, 0.5f) : new Vector3(0, 0f, 0.5f); ;
-        Vector3 endOffset = show ? new Vector3(0, 0f, 0.5f) : new Vector3(0, -0.5f, 0.5f);
+        startOffset = show ? new Vector3(0, -0.5f, 0.5f) : new Vector3(0, 0f, 0.5f); ;
+        endOffset = show ? new Vector3(0, 0f, 0.5f) : new Vector3(0, -0.5f, 0.5f);
+        yield return StartCoroutine(PrepositionQuest());
         questOverlay.SetActive(true);
         while (elapsed < slideDuration)
         {
             elapsed += Time.deltaTime; 
             float t = Mathf.SmoothStep(0, 1, elapsed / slideDuration);
 
-            // Position relative to head
             questOverlay.transform.position = head.position + head.forward * endOffset.z
                                             + head.up * Mathf.Lerp(startOffset.y, endOffset.y, t)
                                             + head.right * Mathf.Lerp(startOffset.x, endOffset.x, t);
 
-            // Face the player
             questOverlay.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
             questOverlay.transform.forward *= -1;
 
@@ -94,12 +96,24 @@ public class PauseMenuManager : MonoBehaviour
         if (!show) 
             questOverlay.SetActive(false);
     }
+    IEnumerator PrepositionQuest()
+    {
+        questOverlay.transform.position = head.position + head.forward * startOffset.z
+                                  + head.up * startOffset.y
+                                  + head.right * startOffset.x;
+        questOverlay.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+        questOverlay.transform.forward *= -1;
+
+       
+        yield return null;
+    }
 
     IEnumerator ReturnToStart()
     {
+        button.Play();
         yield return StartCoroutine(initialiseFade());
         yield return StartCoroutine(Fade(1));
-        SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        SceneManager.LoadScene("Start");
         yield return StartCoroutine(Fade(0));
         yield return StartCoroutine(closeFade());
     }
@@ -136,6 +150,15 @@ public class PauseMenuManager : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         yield return StartCoroutine(Fade(0));
         yield return StartCoroutine(closeFade());
+        showButton.action.Enable();
+        moveInput.action.Enable();
+        questButton.action.Enable();
+        //TimeTracking.tracker.isRunning = true;
+        Debug.Log($"Objective count: {ListTracker.instance?.objectiveList?.Count}");
+        if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
+        {
+            UpdateLog();
+        }
 
     }
     private void Awake()
@@ -151,14 +174,6 @@ public class PauseMenuManager : MonoBehaviour
         questOverlay.SetActive(false);
         fadeScreen.SetActive(true);
         StartCoroutine(FadeOut());
-        showButton.action.Enable();
-        moveInput.action.Enable();
-        questButton.action.Enable();
-        Debug.Log($"Objective count: {ListTracker.instance?.objectiveList?.Count}");
-        if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
-        {
-            UpdateLog();
-        }
     }
 
     // Update is called once per frame
@@ -171,7 +186,6 @@ public class PauseMenuManager : MonoBehaviour
                 questButton.action.Disable();
                 StartCoroutine(OpenQuest(!questVisible));
                 questVisible = !questVisible;
-                //questOverlay.SetActive(!questOverlay.activeSelf);
             }
         }
     if (showButton.action.WasPressedThisFrame())
