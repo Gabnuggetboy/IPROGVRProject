@@ -14,10 +14,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject pauseMenu;
-    public GameObject inventory;
-    public GameObject startingQuestMenu;
     public InputActionProperty showButton;
     public InputActionProperty moveInput;
+    public GameObject inventory;
+    public GameObject startingQuestMenu;
+    public AudioSource button;
     private bool isPaused;
     public Transform head;
     public float spawnDistance = 2;
@@ -29,12 +30,14 @@ public class GameManager : MonoBehaviour
 
     public void resumeGame()
     {
+        button.Play();
         pauseMenu.SetActive(false);
         togglePause();
     }
 
     public void restartPlaythrough()
     {
+        button.Play();
         Debug.Log("Restart");
     }
 
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (mainMenu.activeSelf)
         {
+            button.Play();
             //Application.Quit();
             UnityEditor.EditorApplication.isPlaying = false;
         }
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ReturnToStart()
     {
+        button.Play();
         yield return StartCoroutine(initialiseFade());
         yield return StartCoroutine(Fade(1));
         SceneManager.LoadScene("Start");
@@ -74,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeTeleport(Transform player, Vector3 spawnPoint)
     {
+        button.Play();
         yield return StartCoroutine(initialiseFade());
 
         yield return StartCoroutine(Fade(1));
@@ -86,6 +92,7 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(Fade(0));
 
         yield return StartCoroutine(closeFade());
+        TimeTracking.tracker.isRunning = true;
     }
     IEnumerator initialiseFade()
     {
@@ -131,8 +138,12 @@ public class GameManager : MonoBehaviour
     {
         showButton.action.Disable();
         moveInput.action.Disable();
+        TimeTracking.tracker.elapsedTimeEquipment = 0f;
+        TimeTracking.tracker.elapsedTimePicking = 0f;
+        TimeTracking.tracker.elapsedTimePacking = 0f;
+        if (ListTracker.instance != null)
+            ListTracker.instance.DestroyTracker();
     }
-
     public void StartGame()
     {
         if (inventory != null)
@@ -154,6 +165,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        //button.Play();
         if (SceneManager.GetSceneByName("Start").name != "Start")
         {
             mainMenu.SetActive(false);
@@ -162,8 +174,6 @@ public class GameManager : MonoBehaviour
         {
             fadeScreen.SetActive(false);
             pauseMenu.SetActive(false);
-            inventory.SetActive(false);
-            startingQuestMenu.SetActive(false);
         }
 
     }
@@ -198,5 +208,3 @@ public class GameManager : MonoBehaviour
     }
 
 }
-
-

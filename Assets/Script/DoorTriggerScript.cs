@@ -37,7 +37,7 @@ public class DoorTriggerScript : MonoBehaviour
         }
         else if (SceneManager.GetSceneByName("PickGroceries").name == "PickGroceries")
         {
-            /* Debug.Log("Quest complete");
+             /*Debug.Log("Quest complete");
              anim1.SetBool("Open", true);
              anim2.SetBool("Open", true);
              moveInput.action.Disable();

@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.17281069, g: 0.2159507, b: 0.29789397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6398,6 +6399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be638baf16063ca4f9079279290b989d, type: 3}
+--- !u!82 &1134565094 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4666777051436254576, guid: 144c0b9700194bc479fa07efc39056e6, type: 3}
+  m_PrefabInstance: {fileID: 4666777051206171744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1140267047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6961,9 +6967,9 @@ MonoBehaviour:
   anim2: {fileID: 495244697}
   fadeScreen: {fileID: 476545278}
   fadeImage: {fileID: 107364705}
-  fadeDuration: 2
+  fadeDuration: 1
   moveInput:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Move Input
       m_Type: 0
@@ -6973,7 +6979,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &1256759478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15431,7 +15437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5610974898695114774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17247,8 +17253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 3084642016074539975}
   pauseMenu: {fileID: 5610974898255708473}
-  inventory: {fileID: 9050363630279547621}
-  startingQuestMenu: {fileID: 437508295315336336}
   showButton:
     m_UseReference: 1
     m_Action:
@@ -17273,6 +17277,9 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  inventory: {fileID: 9050363630279547621}
+  startingQuestMenu: {fileID: 437508295315336336}
+  button: {fileID: 1134565094}
   head: {fileID: 2092872701}
   spawnDistance: 2
   spawnPoint: {fileID: 5382597904937183444}
@@ -17332,7 +17339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6598815578688293420
 MonoBehaviour:
   m_ObjectHideFlags: 0
