@@ -25,6 +25,7 @@ public class PackingTrigger : MonoBehaviour
         {
             wrongSelection.Play();
             Debug.Log("Cannot put object");
+            Destroy(other.gameObject);
         }
     }
     // Start is called before the first frame update
