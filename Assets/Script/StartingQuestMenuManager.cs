@@ -14,15 +14,20 @@ public class StartingQuestMenuManager : MonoBehaviour
         public TMP_Text itemNameText;
     }
 
+    [Header("References")]
     public GameObject questOverlay;
     public Transform head;
+
+    [Header("Overlay Settings")]
+    public Vector3 overlayOffset = new Vector3(0, 0, 0.5f);
+
+    [Header("Quests")]
     public List<QuestEntry> questEntries = new List<QuestEntry>();
 
     private Dictionary<string, bool> equippedItems = new Dictionary<string, bool>();
 
     void Start()
     {
-        // Initialize dictionary
         foreach (var quest in questEntries)
         {
             equippedItems[quest.itemName] = false;
@@ -35,7 +40,9 @@ public class StartingQuestMenuManager : MonoBehaviour
     {
         if (questOverlay.activeSelf)
         {
-            questOverlay.transform.position = head.position + head.forward * 0.5f;
+
+            questOverlay.transform.position = head.position + head.TransformDirection(overlayOffset);
+
             questOverlay.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
             questOverlay.transform.forward *= -1;
         }

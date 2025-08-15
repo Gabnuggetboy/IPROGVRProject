@@ -19,7 +19,7 @@ public class FridgeDoorTrigger : MonoBehaviour
         }
     }
 
-    private void OnSelect(SelectEnterEventArgs args)
+    public void OnSelect(SelectEnterEventArgs args)
     {
         ActivateDoor();
     }
