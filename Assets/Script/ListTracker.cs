@@ -25,25 +25,16 @@ public class ListTracker : MonoBehaviour
 
     public void GenerateObjectiveList()
     {
-        int itemQuantity;
         Debug.Log("List Created");
         objectiveList.Clear();
         List<GameObject> tempGroceryList = new List<GameObject>(groceries);
         for (int i = 0; i < numberOfPickedItems; i++)
         {
             int randIndex = Random.Range(0, tempGroceryList.Count);
+            int itemQuantity = Random.Range(1, maxQuantity);
             GameObject selected = tempGroceryList[randIndex];
             tempGroceryList.RemoveAt(randIndex);
             GroceryProperties props = selected.GetComponent<GroceryProperties>();
-            if (props.groceryTag.ToString() == "Bulk" )
-            {
-                itemQuantity = 1;
-            }
-            else
-            {
-                itemQuantity = Random.Range(1, maxQuantity);
-            }
-           
             objectiveList.Add(new Grocery
             {
                 groceryItem = selected,
@@ -73,12 +64,6 @@ public class ListTracker : MonoBehaviour
         }
     }
 
-    public void DestroyTracker()
-    {
-        instance = null;
-        Destroy(gameObject);
-    }
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -88,7 +73,15 @@ public class ListTracker : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (SceneManager.GetActiveScene().name == "Start")
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+     
         }
 
         if (SceneManager.GetActiveScene().name == "PickGroceries")

@@ -1,41 +1,85 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using TMPro;
-
-
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject inventory;
-    public InputActionProperty showButton;
-    public TMP_Text message;
     public Transform head;
-    public float spawnDistance = 2;
+    public float spawnDistance = 1.5f;
+    public GameObject inventoryCanvas;
+    public Vector3 canvasOffset = new Vector3(0, -0.5f, 0);
 
-    public bool isInventoryEnabled = false; 
+    private List<Image> inventorySlots = new List<Image>();
+    private int maxSlots = 5;
+    private int currentSlotIndex = 0;
 
+    private StartingQuestMenuManager startingQuestManager;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-
-        if (!isInventoryEnabled)
+        if (inventoryCanvas == null)
         {
-            inventory.SetActive(false); // Hide until enabled
-            return;
+            inventoryCanvas = GameObject.FindWithTag("InventoryUI");
         }
 
-        inventory.SetActive(true);
+        Transform panel = inventoryCanvas.transform.Find("Panel");
+        foreach (Transform slot in panel)
+        {
+            Image slotImage = slot.GetComponent<Image>();
+            if (slotImage != null)
+            {
+                inventorySlots.Add(slotImage);
+                slotImage.enabled = false;
+            }
+        }
 
-        Vector3 forward = new Vector3(head.forward.x, 0, head.forward.z).normalized;
-        Vector3 position = head.position + forward * spawnDistance;
-        position.y -= 0.3f; 
+        inventoryCanvas.SetActive(true);
 
-        inventory.transform.position = position;
-        inventory.transform.LookAt(new Vector3(head.position.x, inventory.transform.position.y, head.position.z));
-        inventory.transform.forward *= -1;
 
+        startingQuestManager = FindObjectOfType<StartingQuestMenuManager>(); // NEW
+    }
+
+    void Update()
+    {
+        if (inventoryCanvas.activeSelf)
+        {
+            Vector3 forwardDirection = new Vector3(head.forward.x, 0, head.forward.z).normalized;
+            inventoryCanvas.transform.position = head.position + forwardDirection * spawnDistance + canvasOffset;
+            inventoryCanvas.transform.LookAt(new Vector3(head.position.x, head.position.y, head.position.z));
+            inventoryCanvas.transform.forward *= -1;
+        }
+    }
+
+    public void OnObjectGrabbed(SelectEnterEventArgs args)
+    {
+        EquippableItem item = args.interactableObject.transform.GetComponent<EquippableItem>();
+        if (item != null && currentSlotIndex < maxSlots)
+        {
+            AddItemToInventory(item);
+            Destroy(args.interactableObject.transform.gameObject);
+        }
+    }
+
+    private void AddItemToInventory(EquippableItem item)
+    {
+        if (currentSlotIndex < inventorySlots.Count)
+        {
+            Image slot = inventorySlots[currentSlotIndex];
+            slot.sprite = item.inventoryIcon;
+            slot.enabled = true;
+            currentSlotIndex++;
+
+
+            if (startingQuestManager != null)
+            {
+                startingQuestManager.OnItemEquipped(item);
+            }
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        inventoryCanvas.SetActive(!inventoryCanvas.activeSelf);
     }
 }

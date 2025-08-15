@@ -21,7 +21,25 @@ public class GroceryInteraction : MonoBehaviour
         GroceryProperties.GroceryTag.Bulk
     };
 
+    [Header("Audio Settings")]
+    public AudioClip scanBeepSound;
+    private AudioSource audioSource;
+
     private GameObject currentTarget;
+
+    void Start()
+    {
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0f;
+    }
 
     void Update()
     {
@@ -33,7 +51,7 @@ public class GroceryInteraction : MonoBehaviour
             GameObject hitObj = hit.collider.gameObject;
             GroceryProperties grocery = hitObj.GetComponent<GroceryProperties>();
 
-            // Only interact with objects that have the specified tags
+
             if (grocery != null && IsValidTag(grocery.groceryTag))
             {
                 if (hitObj != currentTarget)
@@ -45,37 +63,30 @@ public class GroceryInteraction : MonoBehaviour
                 OutlineHandler outlineHandler = hitObj.GetComponent<OutlineHandler>();
                 XRGrabInteractable grab = hitObj.GetComponent<XRGrabInteractable>();
 
+                if (grab != null)
+                {
+                    grab.enabled = true;
+                }
+
                 if (outlineHandler != null)
                 {
                     if (!grocery.isScanned)
                     {
-                        // Show red outline and disable grabbing
                         outlineHandler.ShowOutline(Color.red);
-                        if (grab != null)
-                        {
-                            grab.enabled = false; // Completely disable grabbing
-                        }
 
-                        // Handle scanning
                         if (triggerAction.action.WasPressedThisFrame())
                         {
-                            ScanItem(grocery, hitObj, outlineHandler, grab);
+                            ScanItem(grocery, hitObj, outlineHandler);
                         }
                     }
                     else
                     {
-                        // Show green outline and enable grabbing
                         outlineHandler.ShowOutline(Color.green);
-                        if (grab != null)
-                        {
-                            grab.enabled = true; // Enable grabbing for scanned items
-                        }
                     }
                 }
             }
             else
             {
-                // If we're looking at something that's not a valid grocery item, clear outline
                 ClearPreviousOutline();
             }
         }
@@ -95,21 +106,19 @@ public class GroceryInteraction : MonoBehaviour
         return false;
     }
 
-    private void ScanItem(GroceryProperties grocery, GameObject hitObj, OutlineHandler outlineHandler, XRGrabInteractable grab)
+    private void ScanItem(GroceryProperties grocery, GameObject hitObj, OutlineHandler outlineHandler)
     {
         grocery.isScanned = true;
         ListTracker.instance.MarkScanned(hitObj);
 
-        // Change to green outline
         outlineHandler.ShowOutline(Color.green);
 
-        // Enable grabbing
-        if (grab != null)
+        if (scanBeepSound != null && audioSource != null)
         {
-            grab.enabled = true;
+            audioSource.PlayOneShot(scanBeepSound);
         }
 
-        Debug.Log($"Scanned: {grocery.itemName} ({grocery.tag})");
+        Debug.Log($"Scanned: {grocery.itemName} ({grocery.groceryTag})");
     }
 
     private void ClearPreviousOutline()

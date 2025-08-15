@@ -13,7 +13,7 @@ public class DoorTriggerScript : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 2.0f;
     public InputActionProperty moveInput;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(InitialiseChangeScene());
@@ -49,9 +49,9 @@ public class DoorTriggerScript : MonoBehaviour
              yield return null;*/
             bool isObjectiveCompleted = true;
 
-            foreach(var item in ListTracker.instance.objectiveList)
+            foreach (var item in ListTracker.instance.objectiveList)
             {
-                if(item.scannedAmount < item.quantity)
+                if (item.scannedAmount < item.quantity)
                 {
                     isObjectiveCompleted = false;
                     Debug.Log("Quest not complete");
@@ -77,7 +77,7 @@ public class DoorTriggerScript : MonoBehaviour
         }
 
     }
-   
+
     IEnumerator Fade(float targetAlpha)
     {
         float startAlpha = fadeImage.color.a;
@@ -100,12 +100,12 @@ public class DoorTriggerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

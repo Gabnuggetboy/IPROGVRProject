@@ -19,11 +19,11 @@ public class QuestManager : MonoBehaviour
             string checkMark;
             if (item.scannedAmount != item.quantity)
             {
-                checkMark = "<color=red>☐</color>";
+                checkMark = "<color=red>✗</color>";
             }
             else
             {
-                checkMark = "<color=green>☑</color>";
+                checkMark = "<color=green>✓</color>";
             }
             logText.text += $"{checkMark} {item.itemName} ({item.scannedAmount}/{item.quantity})\n";
         }

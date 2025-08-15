@@ -10,7 +10,7 @@ public class GroceryProperties : MonoBehaviour
     public enum GroceryTag { Frozen, Refrigerated, Regular, Bulk }
     public GroceryTag groceryTag;
 
-    [SerializeField] private Material outlineMaterial; // Material for outline effect
+    [SerializeField] private Material outlineMaterial; 
     private Material originalMaterial;
     private Renderer objectRenderer;
 
